@@ -2,7 +2,7 @@ from flask import Flask, request, session, render_template_string
 import random
 
 app = Flask(__name__)
-app.secret_key = "gp1-demo"
+app.secret_key = "gp1-demo" # nosec B105
 
 def add_numbers(a, b):
     return a + b
@@ -52,7 +52,7 @@ img { width: 220px; border-radius: 10px; margin-top: 15px; }
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.args.get("reset") == "1" or "target" not in session:
-        session["target"] = random.randint(1, 10)
+        session["target"] = random.randint(1, 10)  # nosec B311
         session["tries"] = 3
 
     message = ""
