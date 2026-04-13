@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 app.secret_key = "gp1-demo" # nosec B105
 
-def add_numbers(a, b):
+def add_numbers(a, b): 
     return a + b
     
 def check_guess(guess, target):
