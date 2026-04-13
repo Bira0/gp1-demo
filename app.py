@@ -16,7 +16,7 @@ def check_guess(guess, target):
 
 HTML = """
 <!doctype html>
-<title>High / Low Game</title>
+<title>High or Low Game</title>
 <style>
 body { font-family: Arial; text-align: center; padding: 40px; background: #f4f4f4; }
 .card { background: white; max-width: 500px; margin: auto; padding: 30px; border-radius: 12px; }
@@ -26,7 +26,7 @@ img { width: 220px; border-radius: 10px; margin-top: 15px; }
 
 <div class="card">
 {% if state == "play" %}
-  <h1>High / Low</h1>
+  <h1>High or Low</h1>
   <p>Guess a number from 1 to 10</p>
   <p>Tries left: {{ tries }}</p>
   <form method="post">
@@ -38,7 +38,7 @@ img { width: 220px; border-radius: 10px; margin-top: 15px; }
 {% elif state == "win" %}
   <h1>🎉 Congratulations! 🎉</h1>
   <p>You guessed the number {{ target }}.</p>
-  <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif">
+  <img src="https://c.tenor.com/2C-iqDjJmnMAAAAd/tenor.gif">
   <form method="get"><button name="reset" value="1">Play Again</button></form>
 
 {% else %}
